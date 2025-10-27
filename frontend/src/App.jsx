@@ -55,7 +55,7 @@ function App() {
       <header className={`header ${isHeaderScrolled ? 'scrolled' : ''}`}>
         <nav className="nav">
           <div className="nav-brand">
-            <h2>Anorak Dev</h2>
+            <h2>AnoraK Dev</h2>
           </div>
           <ul className="nav-links">
             <li><a href="#about">Sobre mí</a></li>
@@ -69,10 +69,10 @@ function App() {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
-          <h1>Hola, soy <span className="highlight">Desarrollador Full Stack</span></h1>
+          <h1>Hola, soy Alex Lirola <span className="highlight">Desarrollador Full Stack</span></h1>
           <p className="hero-description">
-            Creo aplicaciones web modernas, escalables y funcionales utilizando las últimas tecnologías.
-            Especializado en React, Node.js y arquitecturas cloud-native.
+            apasionado por crear aplicaciones web eficientes, seguras y con un buen diseño.
+Trabajo con React, Node.js y Express, y actualmente estoy aprendiendo nuevas tecnologías para seguir creciendo como desarrollador.
           </p>
           <div className="hero-buttons">
             <a href="#projects" className="btn btn-primary">Ver mis proyectos</a>
@@ -98,26 +98,25 @@ function App() {
                 que me permitan seguir creciendo profesionalmente.
               </p>
               <p>
-                Cuando no estoy programando, me gusta mantenerme actualizado con las últimas tendencias tecnológicas,
-                contribuir a proyectos open source y compartir conocimientos con la comunidad.
+                Cuando no estoy programando, me encontrarás resolviendo máquinas en HackTheBox y practicando técnicas de pentesting en mi laboratorio local.
               </p>
             </div>
             <div className="about-stats animate-fade-right">
               <div className="stat-item">
-                <span className="stat-number">25+</span>
+                <span className="stat-number">20+</span>
                 <span className="stat-label">Proyectos Completados</span>
               </div>
               <div className="stat-item">
-                <span className="stat-number">3+</span>
+                <span className="stat-number">1,5+</span>
                 <span className="stat-label">Años de Experiencia</span>
               </div>
               <div className="stat-item">
-                <span className="stat-number">15+</span>
-                <span className="stat-label">Tecnologías Dominadas</span>
+                <span className="stat-number">20+</span>
+                <span className="stat-label">Tecnologías Dominadas entre Desarrollo y Pentesting</span>
               </div>
               <div className="stat-item">
-                <span className="stat-number">100%</span>
-                <span className="stat-label">Proyectos Entregados</span>
+                <span className="stat-number">10+</span>
+                <span className="stat-label">Laboratorios de Pentesting</span>
               </div>
             </div>
           </div>
@@ -132,47 +131,192 @@ function App() {
             <div className="skill-category animate-fade-up">
               <h3>🎨 Frontend</h3>
               <div className="skill-tags">
-                <span className="skill-tag">React</span>
-                <span className="skill-tag">Vue.js</span>
-                <span className="skill-tag">JavaScript</span>
-                <span className="skill-tag">TypeScript</span>
-                <span className="skill-tag">HTML5</span>
-                <span className="skill-tag">CSS3</span>
-                <span className="skill-tag">SASS</span>
-                <span className="skill-tag">Tailwind CSS</span>
-                <span className="skill-tag">Vite</span>
-                <span className="skill-tag">Webpack</span>
+                <span className="skill-tag">
+					<img src="../images/icons/react.svg" alt="React" className="w-5 h-5"
+					style={{ width: '20px', height: '20px' }}/>
+					React
+				</span>
+                <span className="skill-tag">
+					<img src="../images/icons/javascript.svg" alt="Javascript" className="w-5 h-5"
+					style={{ width: '20px', height: '20px' }}/>
+					Javascript
+				</span>
+                <span className="skill-tag">
+					<img src="../images/icons/typescript.svg" alt="Typescript" className="w-5 h-5"
+					style={{ width: '20px', height: '20px' }}/>
+					Typescript
+				</span>
+                <span className="skill-tag">
+					<img src="../images/icons/html.svg" alt="HTML" className="w-5 h-5"
+					style={{ width: '20px', height: '20px' }}/>
+					HTML5
+				</span>
+                <span className="skill-tag">
+					<img src="../images/icons/css.svg" alt="CSS" className="w-5 h-5"
+					style={{ width: '20px', height: '20px' }}/>
+					CSS3
+				</span>
+                <span className="skill-tag">
+					<img src="../images/icons/tailwind.svg" alt="Tailwind" className="w-5 h-5"
+					style={{ width: '20px', height: '20px' }}/>
+					Tailwind CSS
+				</span>
+                <span className="skill-tag">
+					<img src="vite.svg" alt="Vite" className="w-5 h-5"
+					style={{ width: '20px', height: '20px' }}/>
+					Vite
+				</span>
               </div>
             </div>
             <div className="skill-category animate-fade-up" style={{animationDelay: '0.2s'}}>
               <h3>⚙️ Backend</h3>
               <div className="skill-tags">
-                <span className="skill-tag">Node.js</span>
-                <span className="skill-tag">Express</span>
-                <span className="skill-tag">Python</span>
-                <span className="skill-tag">Django</span>
-                <span className="skill-tag">MongoDB</span>
-                <span className="skill-tag">PostgreSQL</span>
-                <span className="skill-tag">MySQL</span>
-                <span className="skill-tag">REST APIs</span>
-                <span className="skill-tag">GraphQL</span>
-                <span className="skill-tag">JWT</span>
+                <span className="skill-tag">
+					<img src="../images/icons/node.svg" alt="Node" className="w-5 h-5"
+					style={{ width: '20px', height: '20px' }}/>
+					Node.js
+				</span>
+                <span className="skill-tag">
+					<img src="../images/icons/express.png" alt="Express" className="w-5 h-5"
+					style={{ width: '20px', height: '20px' }}/>
+					Express
+				</span>
+				<span className="skill-tag">
+					<img src="../images/icons/fastify.svg" alt="Fastify" className="w-5 h-5"
+					style={{ width: '20px', height: '20px' }}/>
+					Fastify
+				</span>
+				<span className="skill-tag">
+					<img src="../images/icons/django.svg" alt="Django" className="w-5 h-5"
+					style={{ width: '20px', height: '20px' }}/>
+					Django
+				</span>
+                <span className="skill-tag">
+					<img src="../images/icons/mongodb.svg" alt="Mongodb" className="w-5 h-5"
+					style={{ width: '30px', height: '30px' }}/>
+					MongoDB
+				</span>
+                <span className="skill-tag">
+					<img src="../images/icons/postgres.svg" alt="Postgres" className="w-5 h-5"
+					style={{ width: '30px', height: '30px' }}/>
+					PostgreSQL
+				</span>
+                <span className="skill-tag">
+					<img src="../images/icons/rest_api.svg" alt="RESTAPIS" className="w-5 h-5"
+					style={{ width: '20px', height: '20px' }}/>
+					REST APIs
+				</span>
+                <span className="skill-tag">
+					<img src="../images/icons/jwt.svg" alt="JWT" className="w-5 h-5"
+					style={{ width: '20px', height: '20px' }}/>
+					JWT
+				</span>
               </div>
             </div>
             <div className="skill-category animate-fade-up" style={{animationDelay: '0.4s'}}>
               <h3>☁️ DevOps & Tools</h3>
-              <div className="skill-tags">
-                <span className="skill-tag">Docker</span>
-                <span className="skill-tag">AWS</span>
-                <span className="skill-tag">Git</span>
-                <span className="skill-tag">GitHub Actions</span>
-                <span className="skill-tag">Linux</span>
-                <span className="skill-tag">Nginx</span>
-                <span className="skill-tag">VS Code</span>
-                <span className="skill-tag">Postman</span>
-                <span className="skill-tag">Figma</span>
-                <span className="skill-tag">Jest</span>
-              </div>
+              	<div className="skill-tags">
+					<span className="skill-tag">
+						<img src="../images/icons/docker.svg" alt="Docker" className="w-5 h-5"
+						style={{ width: '20px', height: '20px' }}/>
+						Docker
+					</span>
+					<span className="skill-tag">
+						<img src="../images/icons/git.svg" alt="Git" className="w-5 h-5"
+						style={{ width: '20px', height: '20px' }}/>
+						Git
+					</span>
+					<span className="skill-tag">
+						<img src="../images/icons/linux.svg" alt="Linux" className="w-5 h-5"
+						style={{ width: '20px', height: '20px' }}/>
+						Linux
+					</span>
+					<span className="skill-tag">
+						<img src="../images/icons/nginx.svg" alt="Nginx" className="w-5 h-5"
+						style={{ width: '20px', height: '20px' }}/>
+						Nginx
+					</span>
+					<span className="skill-tag">
+						<img src="../images/icons/vscode.svg" alt="VSCode" className="w-5 h-5"
+						style={{ width: '20px', height: '20px' }}/>
+						VS Code
+					</span>
+					<span className="skill-tag">
+						<img src="../images/icons/postman.svg" alt="Postman" className="w-5 h-5"
+						style={{ width: '20px', height: '20px' }}/>
+						Postman
+					</span>
+					<span className="skill-tag">
+						<img src="../images/icons/railway.svg" alt="Railway" className="w-5 h-5"
+						style={{ width: '30px', height: '30px' }}/>
+						Railway
+					</span>
+					<span className="skill-tag">
+						<img src="../images/icons/vercel.svg" alt="Vercel" className="w-5 h-5"
+						style={{ width: '20px', height: '20px' }}/>
+						Vercel
+					</span>
+				</div>
+            </div>
+			<div className="skill-category animate-fade-up" style={{animationDelay: '0.4s'}}>
+              <h3>🛡️ Ciberseguridad</h3>
+              	<div className="skill-tags">
+					<span className="skill-tag">
+						<img src="../images/icons/nmap.svg" alt="Nmap" className="w-5 h-5"
+						style={{ width: '20px', height: '20px' }}/>
+						Nmap
+					</span>
+					<span className="skill-tag">
+						<img src="../images/icons/burpsuite.svg" alt="Burpsuite" className="w-5 h-5"
+						style={{ width: '20px', height: '20px' }}/>
+						Burpsuite
+					</span>
+					<span className="skill-tag">
+						<img src="../images/icons/wireshark.png" alt="Wireshark" className="w-5 h-5"
+						style={{ width: '20px', height: '20px' }}/>
+						Wireshark
+					</span>
+					<span className="skill-tag">
+						<img src="../images/icons/osint.png" alt="Osint" className="w-5 h-5"
+						style={{ width: '20px', height: '20px' }}/>
+						OSINT Tools
+					</span>
+					<span className="skill-tag">
+						<img src="../images/icons/owasp.svg" alt="Owasp" className="w-5 h-5"
+						style={{ width: '20px', height: '20px' }}/>
+						OWASP TOP 10
+					</span>
+				</div>
+            </div>
+			<div className="skill-category animate-fade-up" style={{animationDelay: '0.4s'}}>
+              <h3>🧑🏼‍💻 Lenguajes</h3>
+              	<div className="skill-tags">
+					<span className="skill-tag">
+						<img src="../images/icons/c.png" alt="C" className="w-5 h-5"
+						style={{ width: '20px', height: '20px' }}/>
+						C
+					</span>
+					<span className="skill-tag">
+						<img src="../images/icons/c++.svg" alt="C++" className="w-5 h-5"
+						style={{ width: '20px', height: '20px' }}/>
+						C++
+					</span>
+					<span className="skill-tag">
+						<img src="../images/icons/python.svg" alt="Wireshark" className="w-5 h-5"
+						style={{ width: '20px', height: '20px' }}/>
+						Python
+					</span>
+					<span className="skill-tag">
+						<img src="../images/icons/javascript.svg" alt="Javascript" className="w-5 h-5"
+						style={{ width: '20px', height: '20px' }}/>
+						Javascript
+					</span>
+					<span className="skill-tag">
+						<img src="../images/icons/typescript.svg" alt="Typescript" className="w-5 h-5"
+						style={{ width: '20px', height: '20px' }}/>
+						Typescript
+					</span>
+				</div>
             </div>
           </div>
         </div>
@@ -317,45 +461,49 @@ function App() {
             </p>
             
             <div className="contact-links">
-              <a href="mailto:tu@email.com" className="contact-link">
-                <span>📧</span>
-                <span>tu@email.com</span>
+              <a href="mailto:allife2004.AL@gmail.com" className="contact-link" target="_blank">
+                <span>
+					<img 
+						src="../images/gmail.png" 
+						alt="Email" 
+						style={{ width: '30px', height: '30px' }}
+						/>
+				</span>
+                <span>Email</span>
               </a>
-              <a href="https://linkedin.com/in/tu-perfil" className="contact-link">
-                <span>💼</span>
+              <a href="https://linkedin.com/in/alexlirola" className="contact-link" target="_blank">
+                <span>
+					<img 
+						src="../images/linkedin.png" 
+						alt="Linkedin" 
+						style={{ width: '30px', height: '30px' }}
+						/>
+				</span>
                 <span>LinkedIn</span>
               </a>
-              <a href="https://github.com/tu-usuario" className="contact-link">
-                <span>🐱</span>
+              <a href="https://github.com/alirola" className="contact-link" target="_blank">
+                <span>
+					<span>
+					<img 
+						src="../images/github.png" 
+						alt="github" 
+						style={{ width: '30px', height: '30px' }}
+						/>
+				</span>
+				</span>
                 <span>GitHub</span>
               </a>
-              <a href="https://twitter.com/tu-usuario" className="contact-link">
-                <span>🐦</span>
-                <span>Twitter</span>
+              <a href="https://x.com/anorak1854" className="contact-link" target="_blank">
+                <span>
+					<img 
+						src="../images/gorjeo.png" 
+						alt="X" 
+						style={{ width: '30px', height: '30px' }}
+						/>
+				</span>
+				<span>X</span>
               </a>
             </div>
-
-            <form className="contact-form" onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label htmlFor="name">Nombre</label>
-                <input type="text" id="name" name="name" required />
-              </div>
-              <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <input type="email" id="email" name="email" required />
-              </div>
-              <div className="form-group">
-                <label htmlFor="subject">Asunto</label>
-                <input type="text" id="subject" name="subject" required />
-              </div>
-              <div className="form-group">
-                <label htmlFor="message">Mensaje</label>
-                <textarea id="message" name="message" required></textarea>
-              </div>
-              <button type="submit" className="btn btn-primary" style={{width: '100%'}}>
-                Enviar Mensaje
-              </button>
-            </form>
           </div>
         </div>
       </section>
@@ -363,7 +511,7 @@ function App() {
       {/* Footer */}
       <footer className="footer">
         <div className="container">
-          <p>&copy; 2024 Anorak Dev. Diseñado y desarrollado con ❤️</p>
+          <p>&copy; 2024 AnoraK Dev. Diseñado y desarrollado con ❤️</p>
         </div>
       </footer>
     </div>
