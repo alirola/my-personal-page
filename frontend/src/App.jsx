@@ -19,12 +19,6 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // Aquí puedes manejar el envío del formulario
-    alert('¡Mensaje enviado! Te contactaré pronto.')
-  }
-
   return (
     <div className="app">
       {/* Scroll Progress Indicator */}
@@ -72,7 +66,7 @@ function App() {
           <h1>Hola, soy Alex Lirola <span className="highlight">Desarrollador Full Stack</span></h1>
           <p className="hero-description">
             apasionado por crear aplicaciones web eficientes, seguras y con un buen diseño.
-Trabajo con React, Node.js y Express, y actualmente estoy aprendiendo nuevas tecnologías para seguir creciendo como desarrollador.
+			Trabajo con React, Node.js y Express, y actualmente estoy aprendiendo nuevas tecnologías para seguir creciendo como desarrollador.
           </p>
           <div className="hero-buttons">
             <a href="#projects" className="btn btn-primary">Ver mis proyectos</a>
@@ -326,127 +320,120 @@ Trabajo con React, Node.js y Express, y actualmente estoy aprendiendo nuevas tec
       <section id="projects" className="projects">
         <div className="container">
           <h2>Mis Proyectos</h2>
-          <div className="projects-grid">
-            <div className="project-card animate-fade-up">
-              <h3>🛒 E-Commerce Platform</h3>
-              <p>
-                Plataforma de comercio electrónico completa con carrito de compras, 
-                sistema de pagos, panel de administración y gestión de inventario.
-                Incluye autenticación, roles de usuario y dashboard analítico.
-              </p>
-              <div className="project-tech">
-                <span className="tech-tag">React</span>
-                <span className="tech-tag">Node.js</span>
-                <span className="tech-tag">MongoDB</span>
-                <span className="tech-tag">Stripe</span>
-                <span className="tech-tag">JWT</span>
-              </div>
-              <div className="project-links">
-                <a href="https://github.com/tu-usuario/ecommerce" className="btn btn-small">Ver código</a>
-                <a href="https://ecommerce-demo.com" className="btn btn-small">Demo</a>
-              </div>
-            </div>
-            
-            <div className="project-card animate-fade-up" style={{animationDelay: '0.2s'}}>
-              <h3>📱 Social Media App</h3>
-              <p>
-                Aplicación social con funciones de posts, comentarios, likes, 
-                chat en tiempo real, notificaciones push y sistema de seguidores.
-                Implementada con arquitectura escalable y real-time features.
-              </p>
-              <div className="project-tech">
-                <span className="tech-tag">Vue.js</span>
-                <span className="tech-tag">Socket.io</span>
-                <span className="tech-tag">Express</span>
-                <span className="tech-tag">PostgreSQL</span>
-                <span className="tech-tag">Redis</span>
-              </div>
-              <div className="project-links">
-                <a href="https://github.com/tu-usuario/social-app" className="btn btn-small">Ver código</a>
-                <a href="https://social-demo.com" className="btn btn-small">Demo</a>
-              </div>
-            </div>
-            
-            <div className="project-card animate-fade-up" style={{animationDelay: '0.4s'}}>
-              <h3>📊 Analytics Dashboard</h3>
-              <p>
-                Dashboard analítico con visualización de datos en tiempo real,
-                reportes customizables, filtros avanzados y exportación de datos.
-                Optimizado para grandes volúmenes de información.
-              </p>
-              <div className="project-tech">
-                <span className="tech-tag">React</span>
-                <span className="tech-tag">D3.js</span>
-                <span className="tech-tag">Python</span>
-                <span className="tech-tag">FastAPI</span>
-                <span className="tech-tag">Docker</span>
-              </div>
-              <div className="project-links">
-                <a href="https://github.com/tu-usuario/analytics" className="btn btn-small">Ver código</a>
-                <a href="https://analytics-demo.com" className="btn btn-small">Demo</a>
-              </div>
-            </div>
+			<div className="projects-grid">
+				<div className="project-card animate-fade-up">
+					<h3>👨‍💻Minishell</h3>
+					<p>
+						Un shell de Unix/Linux completamente funcional implementado 
+						desde cero en C. Soporta ejecución de comandos, pipes, 
+						redirecciones, variables de entorno y más.
+						Proyecto hecho en conjunto con compañeros del campus.
+					</p>
+					<div className="project-tech">
+						<span className="tech-tag">
+							<img src="../images/icons/c.png" alt="C" 
+							className="w-5 h-5"
+							style={{ width: '20px', height: '20px' }}/>
+							C
+						</span>
+					</div>
+					<div className="project-links">
+						<a href="https://github.com/alirola/minishell" className="btn btn-small" target='_blank'>Ver código</a>
+					</div>
+				</div>
+				
+				<div className="project-card animate-fade-up">
+					<h3>🏢Página de gestión de comunidad de vecinos</h3>
+					<p>
+						Plataforma de gestión comunitaria con funciones como tablón de anuncios,
+						 indidencias, reservas para la pista de padel, función de aplicación móvil, etc.
+					</p>
+					<div className="project-tech">
+						<span className="tech-tag">
+							<img src="../images/icons/react.svg" alt="React" 
+							className="w-5 h-5"
+							style={{ width: '20px', height: '20px' }}/>
+							React
+						</span>
+						<span className="tech-tag">
+							<img src="../images/icons/node.svg" alt="Node" 
+							className="w-5 h-5"
+							style={{ width: '20px', height: '20px' }}/>
+							Node.js
+						</span>
+						<span className="tech-tag">
+							<img src="vite.svg" alt="Vite" 
+							className="w-5 h-5"
+							style={{ width: '20px', height: '20px' }}/>
+							Vite
+						</span>
+						<span className="tech-tag">
+							<img src="../images/icons/postgres.svg" alt="Postgres" 
+							className="w-5 h-5"
+							style={{ width: '20px', height: '20px' }}/>
+							Postgresql
+						</span>
+						<span className="tech-tag">
+							<img src="../images/icons/express.png" alt="Express" 
+							className="w-5 h-5"
+							style={{ width: '20px', height: '20px' }}/>
+							Express
+						</span>
+						<span className="tech-tag">
+							<img src="../images/icons/jwt.svg" alt="JWT" 
+							className="w-5 h-5"
+							style={{ width: '20px', height: '20px' }}/>
+							JWT
+						</span>
+						<span className="tech-tag">
+							<img src="../images/icons/vercel.svg" alt="vercel" 
+							className="w-5 h-5"
+							style={{ width: '20px', height: '20px' }}/>
+							Vercel
+						</span>
+						<span className="tech-tag">
+							<img src="../images/icons/railway.svg" alt="railway" 
+							className="w-5 h-5"
+							style={{ width: '20px', height: '20px' }}/>
+							Railway
+						</span>
+					</div>
+					<div className="project-links">
+						<a href="https://demo-comunidad.vercel.app/" className="btn btn-small" target='_blank'>Demo</a>
+						<span>usuario: demo@demo.com contraseña: 1234</span>
+					</div>
+				</div>
 
-            <div className="project-card animate-fade-up" style={{animationDelay: '0.6s'}}>
-              <h3>🎵 Music Streaming Platform</h3>
-              <p>
-                Plataforma de streaming de música con reproductores, playlists,
-                búsqueda avanzada, recomendaciones personalizadas y sistema de subscripciones.
-                Audio optimizado y experiencia mobile-first.
-              </p>
-              <div className="project-tech">
-                <span className="tech-tag">Next.js</span>
-                <span className="tech-tag">GraphQL</span>
-                <span className="tech-tag">Node.js</span>
-                <span className="tech-tag">MongoDB</span>
-                <span className="tech-tag">AWS S3</span>
-              </div>
-              <div className="project-links">
-                <a href="https://github.com/tu-usuario/music-platform" className="btn btn-small">Ver código</a>
-                <a href="https://music-demo.com" className="btn btn-small">Demo</a>
-              </div>
-            </div>
-
-            <div className="project-card animate-fade-up" style={{animationDelay: '0.8s'}}>
-              <h3>🏠 Smart Home IoT System</h3>
-              <p>
-                Sistema IoT para hogares inteligentes con control de dispositivos,
-                automatización, monitoreo de sensores y dashboard de control remoto.
-                Incluye app móvil y notificaciones en tiempo real.
-              </p>
-              <div className="project-tech">
-                <span className="tech-tag">React Native</span>
-                <span className="tech-tag">MQTT</span>
-                <span className="tech-tag">Python</span>
-                <span className="tech-tag">Raspberry Pi</span>
-                <span className="tech-tag">InfluxDB</span>
-              </div>
-              <div className="project-links">
-                <a href="https://github.com/tu-usuario/smart-home" className="btn btn-small">Ver código</a>
-                <a href="https://smarthome-demo.com" className="btn btn-small">Demo</a>
-              </div>
-            </div>
-
-            <div className="project-card animate-fade-up" style={{animationDelay: '1s'}}>
-              <h3>💰 Cryptocurrency Tracker</h3>
-              <p>
-                Aplicación para seguimiento de criptomonedas con gráficos interactivos,
-                alertas de precios, portfolio personal y análisis técnico.
-                Datos en tiempo real desde múltiples exchanges.
-              </p>
-              <div className="project-tech">
-                <span className="tech-tag">TypeScript</span>
-                <span className="tech-tag">Chart.js</span>
-                <span className="tech-tag">WebSocket</span>
-                <span className="tech-tag">Redis</span>
-                <span className="tech-tag">Docker</span>
-              </div>
-              <div className="project-links">
-                <a href="https://github.com/tu-usuario/crypto-tracker" className="btn btn-small">Ver código</a>
-                <a href="https://crypto-demo.com" className="btn btn-small">Demo</a>
-              </div>
-            </div>
-          </div>
+				<div className="project-card animate-fade-up">
+					<h3>Esta misma página web</h3>
+					<p>
+						Página web creada con la intencion de presentarme como programador y adentrarme al mundo laboral enseñando mis skills.
+					</p>
+					<div className="project-tech">
+						<span className="tech-tag">
+							<img src="../images/icons/react.svg" alt="React" 
+							className="w-5 h-5"
+							style={{ width: '20px', height: '20px' }}/>
+							React
+						</span>
+						<span className="tech-tag">
+							<img src="vite.svg" alt="Vite" 
+							className="w-5 h-5"
+							style={{ width: '20px', height: '20px' }}/>
+							Vite
+						</span>
+						<span className="tech-tag">
+							<img src="../images/icons/vercel.svg" alt="vercel" 
+							className="w-5 h-5"
+							style={{ width: '20px', height: '20px' }}/>
+							Vercel
+						</span>
+					</div>
+					<div className="project-links">
+						<a href="https://github.com/alirola/my-personal-page" className="btn btn-small" target='_blank'>Ver código</a>
+					</div>
+				</div>
+          	</div>
         </div>
       </section>
 
