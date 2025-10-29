@@ -126,32 +126,32 @@ function App() {
               <h3>🎨 Frontend</h3>
               <div className="skill-tags">
                 <span className="skill-tag">
-					<img src="../images/icons/react.svg" alt="React" className="w-5 h-5"
+					<img src="/images/icons/react.svg" alt="React" className="w-5 h-5"
 					style={{ width: '20px', height: '20px' }}/>
 					React
 				</span>
                 <span className="skill-tag">
-					<img src="../images/icons/javascript.svg" alt="Javascript" className="w-5 h-5"
+					<img src="/images/icons/javascript.svg" alt="Javascript" className="w-5 h-5"
 					style={{ width: '20px', height: '20px' }}/>
 					Javascript
 				</span>
                 <span className="skill-tag">
-					<img src="../images/icons/typescript.svg" alt="Typescript" className="w-5 h-5"
+					<img src="/images/icons/typescript.svg" alt="Typescript" className="w-5 h-5"
 					style={{ width: '20px', height: '20px' }}/>
 					Typescript
 				</span>
                 <span className="skill-tag">
-					<img src="../images/icons/html.svg" alt="HTML" className="w-5 h-5"
+					<img src="/images/icons/html.svg" alt="HTML" className="w-5 h-5"
 					style={{ width: '20px', height: '20px' }}/>
 					HTML5
 				</span>
                 <span className="skill-tag">
-					<img src="../images/icons/css.svg" alt="CSS" className="w-5 h-5"
+					<img src="/images/icons/css.svg" alt="CSS" className="w-5 h-5"
 					style={{ width: '20px', height: '20px' }}/>
 					CSS3
 				</span>
                 <span className="skill-tag">
-					<img src="../images/icons/tailwind.svg" alt="Tailwind" className="w-5 h-5"
+					<img src="/images/icons/tailwind.svg" alt="Tailwind" className="w-5 h-5"
 					style={{ width: '20px', height: '20px' }}/>
 					Tailwind CSS
 				</span>
@@ -166,42 +166,42 @@ function App() {
               <h3>⚙️ Backend</h3>
               <div className="skill-tags">
                 <span className="skill-tag">
-					<img src="../images/icons/node.svg" alt="Node" className="w-5 h-5"
+					<img src="/images/icons/node.svg" alt="Node" className="w-5 h-5"
 					style={{ width: '20px', height: '20px' }}/>
 					Node.js
 				</span>
                 <span className="skill-tag">
-					<img src="../images/icons/express.png" alt="Express" className="w-5 h-5"
+					<img src="/images/icons/express.png" alt="Express" className="w-5 h-5"
 					style={{ width: '20px', height: '20px' }}/>
 					Express
 				</span>
 				<span className="skill-tag">
-					<img src="../images/icons/fastify.svg" alt="Fastify" className="w-5 h-5"
+					<img src="/images/icons/fastify.svg" alt="Fastify" className="w-5 h-5"
 					style={{ width: '20px', height: '20px' }}/>
 					Fastify
 				</span>
 				<span className="skill-tag">
-					<img src="../images/icons/django.svg" alt="Django" className="w-5 h-5"
+					<img src="/images/icons/django.svg" alt="Django" className="w-5 h-5"
 					style={{ width: '20px', height: '20px' }}/>
 					Django
 				</span>
                 <span className="skill-tag">
-					<img src="../images/icons/mongodb.svg" alt="Mongodb" className="w-5 h-5"
+					<img src="/images/icons/mongodb.svg" alt="Mongodb" className="w-5 h-5"
 					style={{ width: '30px', height: '30px' }}/>
 					MongoDB
 				</span>
                 <span className="skill-tag">
-					<img src="../images/icons/postgres.svg" alt="Postgres" className="w-5 h-5"
+					<img src="/images/icons/postgres.svg" alt="Postgres" className="w-5 h-5"
 					style={{ width: '30px', height: '30px' }}/>
 					PostgreSQL
 				</span>
                 <span className="skill-tag">
-					<img src="../images/icons/rest_api.svg" alt="RESTAPIS" className="w-5 h-5"
+					<img src="/images/icons/rest_api.svg" alt="RESTAPIS" className="w-5 h-5"
 					style={{ width: '20px', height: '20px' }}/>
 					REST APIs
 				</span>
                 <span className="skill-tag">
-					<img src="../images/icons/jwt.svg" alt="JWT" className="w-5 h-5"
+					<img src="/images/icons/jwt.svg" alt="JWT" className="w-5 h-5"
 					style={{ width: '20px', height: '20px' }}/>
 					JWT
 				</span>
@@ -211,42 +211,42 @@ function App() {
               <h3>☁️ DevOps & Tools</h3>
               	<div className="skill-tags">
 					<span className="skill-tag">
-						<img src="../images/icons/docker.svg" alt="Docker" className="w-5 h-5"
+						<img src="/images/icons/docker.svg" alt="Docker" className="w-5 h-5"
 						style={{ width: '20px', height: '20px' }}/>
 						Docker
 					</span>
 					<span className="skill-tag">
-						<img src="../images/icons/git.svg" alt="Git" className="w-5 h-5"
+						<img src="/images/icons/git.svg" alt="Git" className="w-5 h-5"
 						style={{ width: '20px', height: '20px' }}/>
 						Git
 					</span>
 					<span className="skill-tag">
-						<img src="../images/icons/linux.svg" alt="Linux" className="w-5 h-5"
+						<img src="/images/icons/linux.svg" alt="Linux" className="w-5 h-5"
 						style={{ width: '20px', height: '20px' }}/>
 						Linux
 					</span>
 					<span className="skill-tag">
-						<img src="../images/icons/nginx.svg" alt="Nginx" className="w-5 h-5"
+						<img src="/images/icons/nginx.svg" alt="Nginx" className="w-5 h-5"
 						style={{ width: '20px', height: '20px' }}/>
 						Nginx
 					</span>
 					<span className="skill-tag">
-						<img src="../images/icons/vscode.svg" alt="VSCode" className="w-5 h-5"
+						<img src="/images/icons/vscode.svg" alt="VSCode" className="w-5 h-5"
 						style={{ width: '20px', height: '20px' }}/>
 						VS Code
 					</span>
 					<span className="skill-tag">
-						<img src="../images/icons/postman.svg" alt="Postman" className="w-5 h-5"
+						<img src="/images/icons/postman.svg" alt="Postman" className="w-5 h-5"
 						style={{ width: '20px', height: '20px' }}/>
 						Postman
 					</span>
 					<span className="skill-tag">
-						<img src="../images/icons/railway.svg" alt="Railway" className="w-5 h-5"
+						<img src="/images/icons/railway.svg" alt="Railway" className="w-5 h-5"
 						style={{ width: '30px', height: '30px' }}/>
 						Railway
 					</span>
 					<span className="skill-tag">
-						<img src="../images/icons/vercel.svg" alt="Vercel" className="w-5 h-5"
+						<img src="/images/icons/vercel.svg" alt="Vercel" className="w-5 h-5"
 						style={{ width: '20px', height: '20px' }}/>
 						Vercel
 					</span>
@@ -256,27 +256,27 @@ function App() {
               <h3>🛡️ Ciberseguridad</h3>
               	<div className="skill-tags">
 					<span className="skill-tag">
-						<img src="../images/icons/nmap.svg" alt="Nmap" className="w-5 h-5"
+						<img src="/images/icons/nmap.svg" alt="Nmap" className="w-5 h-5"
 						style={{ width: '20px', height: '20px' }}/>
 						Nmap
 					</span>
 					<span className="skill-tag">
-						<img src="../images/icons/burpsuite.svg" alt="Burpsuite" className="w-5 h-5"
+						<img src="/images/icons/burpsuite.svg" alt="Burpsuite" className="w-5 h-5"
 						style={{ width: '20px', height: '20px' }}/>
 						Burpsuite
 					</span>
 					<span className="skill-tag">
-						<img src="../images/icons/wireshark.png" alt="Wireshark" className="w-5 h-5"
+						<img src="/images/icons/wireshark.png" alt="Wireshark" className="w-5 h-5"
 						style={{ width: '20px', height: '20px' }}/>
 						Wireshark
 					</span>
 					<span className="skill-tag">
-						<img src="../images/icons/osint.png" alt="Osint" className="w-5 h-5"
+						<img src="/images/icons/osint.png" alt="Osint" className="w-5 h-5"
 						style={{ width: '20px', height: '20px' }}/>
 						OSINT Tools
 					</span>
 					<span className="skill-tag">
-						<img src="../images/icons/owasp.svg" alt="Owasp" className="w-5 h-5"
+						<img src="/images/icons/owasp.svg" alt="Owasp" className="w-5 h-5"
 						style={{ width: '20px', height: '20px' }}/>
 						OWASP TOP 10
 					</span>
@@ -286,27 +286,27 @@ function App() {
               <h3>🧑🏼‍💻 Lenguajes</h3>
               	<div className="skill-tags">
 					<span className="skill-tag">
-						<img src="../images/icons/c.png" alt="C" className="w-5 h-5"
+						<img src="/images/icons/c.png" alt="C" className="w-5 h-5"
 						style={{ width: '20px', height: '20px' }}/>
 						C
 					</span>
 					<span className="skill-tag">
-						<img src="../images/icons/c++.svg" alt="C++" className="w-5 h-5"
+						<img src="/images/icons/c++.svg" alt="C++" className="w-5 h-5"
 						style={{ width: '20px', height: '20px' }}/>
 						C++
 					</span>
 					<span className="skill-tag">
-						<img src="../images/icons/python.svg" alt="Wireshark" className="w-5 h-5"
+						<img src="/images/icons/python.svg" alt="Wireshark" className="w-5 h-5"
 						style={{ width: '20px', height: '20px' }}/>
 						Python
 					</span>
 					<span className="skill-tag">
-						<img src="../images/icons/javascript.svg" alt="Javascript" className="w-5 h-5"
+						<img src="/images/icons/javascript.svg" alt="Javascript" className="w-5 h-5"
 						style={{ width: '20px', height: '20px' }}/>
 						Javascript
 					</span>
 					<span className="skill-tag">
-						<img src="../images/icons/typescript.svg" alt="Typescript" className="w-5 h-5"
+						<img src="/images/icons/typescript.svg" alt="Typescript" className="w-5 h-5"
 						style={{ width: '20px', height: '20px' }}/>
 						Typescript
 					</span>
@@ -331,7 +331,7 @@ function App() {
 					</p>
 					<div className="project-tech">
 						<span className="tech-tag">
-							<img src="../images/icons/c.png" alt="C" 
+							<img src="/images/icons/c.png" alt="C" 
 							className="w-5 h-5"
 							style={{ width: '20px', height: '20px' }}/>
 							C
@@ -350,13 +350,13 @@ function App() {
 					</p>
 					<div className="project-tech">
 						<span className="tech-tag">
-							<img src="../images/icons/react.svg" alt="React" 
+							<img src="/images/icons/react.svg" alt="React" 
 							className="w-5 h-5"
 							style={{ width: '20px', height: '20px' }}/>
 							React
 						</span>
 						<span className="tech-tag">
-							<img src="../images/icons/node.svg" alt="Node" 
+							<img src="/images/icons/node.svg" alt="Node" 
 							className="w-5 h-5"
 							style={{ width: '20px', height: '20px' }}/>
 							Node.js
@@ -368,31 +368,31 @@ function App() {
 							Vite
 						</span>
 						<span className="tech-tag">
-							<img src="../images/icons/postgres.svg" alt="Postgres" 
+							<img src="/images/icons/postgres.svg" alt="Postgres" 
 							className="w-5 h-5"
 							style={{ width: '20px', height: '20px' }}/>
 							Postgresql
 						</span>
 						<span className="tech-tag">
-							<img src="../images/icons/express.png" alt="Express" 
+							<img src="/images/icons/express.png" alt="Express" 
 							className="w-5 h-5"
 							style={{ width: '20px', height: '20px' }}/>
 							Express
 						</span>
 						<span className="tech-tag">
-							<img src="../images/icons/jwt.svg" alt="JWT" 
+							<img src="/images/icons/jwt.svg" alt="JWT" 
 							className="w-5 h-5"
 							style={{ width: '20px', height: '20px' }}/>
 							JWT
 						</span>
 						<span className="tech-tag">
-							<img src="../images/icons/vercel.svg" alt="vercel" 
+							<img src="/images/icons/vercel.svg" alt="vercel" 
 							className="w-5 h-5"
 							style={{ width: '20px', height: '20px' }}/>
 							Vercel
 						</span>
 						<span className="tech-tag">
-							<img src="../images/icons/railway.svg" alt="railway" 
+							<img src="/images/icons/railway.svg" alt="railway" 
 							className="w-5 h-5"
 							style={{ width: '20px', height: '20px' }}/>
 							Railway
@@ -411,7 +411,7 @@ function App() {
 					</p>
 					<div className="project-tech">
 						<span className="tech-tag">
-							<img src="../images/icons/react.svg" alt="React" 
+							<img src="/images/icons/react.svg" alt="React" 
 							className="w-5 h-5"
 							style={{ width: '20px', height: '20px' }}/>
 							React
@@ -423,7 +423,7 @@ function App() {
 							Vite
 						</span>
 						<span className="tech-tag">
-							<img src="../images/icons/vercel.svg" alt="vercel" 
+							<img src="/images/icons/vercel.svg" alt="vercel" 
 							className="w-5 h-5"
 							style={{ width: '20px', height: '20px' }}/>
 							Vercel
@@ -451,7 +451,7 @@ function App() {
               <a href="mailto:allife2004.AL@gmail.com" className="contact-link" target="_blank">
                 <span>
 					<img 
-						src="../images/gmail.png" 
+						src="/images/gmail.png" 
 						alt="Email" 
 						style={{ width: '30px', height: '30px' }}
 						/>
@@ -461,7 +461,7 @@ function App() {
               <a href="https://linkedin.com/in/alexlirola" className="contact-link" target="_blank">
                 <span>
 					<img 
-						src="../images/linkedin.png" 
+						src="/images/linkedin.png" 
 						alt="Linkedin" 
 						style={{ width: '30px', height: '30px' }}
 						/>
@@ -472,7 +472,7 @@ function App() {
                 <span>
 					<span>
 					<img 
-						src="../images/github.png" 
+						src="/images/github.png" 
 						alt="github" 
 						style={{ width: '30px', height: '30px' }}
 						/>
@@ -483,7 +483,7 @@ function App() {
               <a href="https://x.com/anorak1854" className="contact-link" target="_blank">
                 <span>
 					<img 
-						src="../images/gorjeo.png" 
+						src="/images/gorjeo.png" 
 						alt="X" 
 						style={{ width: '30px', height: '30px' }}
 						/>
