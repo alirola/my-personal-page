@@ -22,8 +22,9 @@ function App() {
 
   const handleDownloadCV = (e) => {
     const href = '/curriculum/CVFinal.pdf'
-    // URL backend: en local con docker-compose es http://localhost:8080
-    const backendTrackUrl = `${window.location.protocol}//${window.location.hostname}:8080/api/track-download`
+    const backendTrackUrl = window.location.hostname === 'localhost'
+    ? `${window.location.protocol}//${window.location.hostname}:8080/api/track-download`
+    : 'https://comunidad-vecinos-production.up.railway.app/api/track-download'
 
     // preparar payload mínimo
     const payload = {
@@ -570,7 +571,9 @@ function App() {
 // --- INICIO: panel secreto (añadido) ---
 
 const secretPath = '/secretstatepanel'
-const backendBase = `${window.location.protocol}//${window.location.hostname}:8080`
+const backendBase = window.location.hostname === 'localhost' 
+  ? `${window.location.protocol}//${window.location.hostname}:8080`
+  : 'https://comunidad-vecinos-production.up.railway.app/'
 
 function AdminLogin({ onSuccess }) {
   const [code, setCode] = useState('')
