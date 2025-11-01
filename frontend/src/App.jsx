@@ -145,7 +145,7 @@ function App() {
             <div className="about-text animate-fade-left">
               <p>
                 Soy un desarrollador full-stack apasionado por crear soluciones digitales que marquen la diferencia.
-                Con más de 3 años de experiencia, me especializo en el desarrollo de aplicaciones web modernas,
+                Con más de 1,5 años de experiencia programando, me especializo en el desarrollo de aplicaciones web modernas,
                 APIs robustas y experiencias de usuario excepcionales.
               </p>
               <p>
