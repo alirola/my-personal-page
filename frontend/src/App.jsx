@@ -24,7 +24,7 @@ function App() {
     const href = '/curriculum/CVFinal.pdf'
     const backendTrackUrl = window.location.hostname === 'localhost'
     ? `${window.location.protocol}//${window.location.hostname}:8080/api/track-download`
-    : 'https://comunidad-vecinos-production.up.railway.app/api/track-download'
+    : 'https://my-personal-page-production.up.railway.app/api/track-download'
 
     // preparar payload mínimo
     const payload = {
@@ -573,7 +573,7 @@ function App() {
 const secretPath = '/secretstatepanel'
 const backendBase = window.location.hostname === 'localhost' 
   ? `${window.location.protocol}//${window.location.hostname}:8080`
-  : 'https://comunidad-vecinos-production.up.railway.app'
+  : 'https://my-personal-page-production.up.railway.app/'
 
 function AdminLogin({ onSuccess }) {
   const [code, setCode] = useState('')
