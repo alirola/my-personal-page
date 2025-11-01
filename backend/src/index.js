@@ -10,11 +10,27 @@ const app = express();
 
 app.use(express.json());
 
+// CORS dinámico para desarrollo y producción
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://anorakdev.vercel.app', // Tu dominio de Vercel
+];
+
 app.use(cors({
-	origin: 'http://localhost:5173',
-	method: ['GET', 'POST', 'OPTIONS'],
-	allowedHeaders: ['Content-Type', 'Origin', 'Accept', 'Authorization', 'X-Admin-Token'],
-	credentials: true
+  origin: function (origin, callback) {
+    // Permitir requests sin origin (mobile apps, etc.)
+    if (!origin) return callback(null, true);
+    
+    if (allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      console.log('❌ CORS blocked origin:', origin);
+      callback(new Error('No permitido por CORS'));
+    }
+  },
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Origin', 'Accept', 'Authorization', 'X-Admin-Token'],
+  credentials: true
 }));
 
 const ADMIN_CODE = process.env.ADMIN_CODE || 'abrir';
@@ -25,52 +41,58 @@ let db;
 const client = new MongoClient(MONGODB_URI);
 
 try {
-	await client.connect();
-	db = client.db('mpp_db');
-	console.log('✅ Conectado a MongoDB');
-	await db.collection('downloads').createIndex({ timestamp: -1 });
-	await db.collection('downloads').createIndex({ country: 1 });
-  	await db.collection('downloads').createIndex({ ip: 1 });
+    await client.connect();
+    db = client.db('mpp_db');
+    console.log('✅ Conectado a MongoDB');
+    await db.collection('downloads').createIndex({ timestamp: -1 });
+    await db.collection('downloads').createIndex({ country: 1 });
+      await db.collection('downloads').createIndex({ ip: 1 });
 }catch(err){
-	console.error('❌ Error conectando a MongoDB');
-	process.exit(1);
+    console.error('❌ Error conectando a MongoDB:', err.message);
+    process.exit(1);
 }
 
+// Middleware CORS adicional (para asegurar headers en todas las respuestas)
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173')
-  res.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS')
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Origin, Accept, Authorization, X-Admin-Token')
-  res.setHeader('Access-Control-Allow-Credentials', 'true')
-  if (req.method === 'OPTIONS') return res.sendStatus(204)
-  next()
-})
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  }
+  res.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Origin, Accept, Authorization, X-Admin-Token');
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+  if (req.method === 'OPTIONS') return res.sendStatus(204);
+  next();
+});
 
 app.post('/api/auth' ,express.json(), (req, res) => {
-	const { code } = req.body || {}
-	if (code && code === ADMIN_CODE) {
-		return res.json({ token: ADMIN_TOKEN})
-	}
-	return res.status(401).json({ error: 'invalid_code' })
+    const { code } = req.body || {}
+    if (code && code === ADMIN_CODE) {
+        return res.json({ token: ADMIN_TOKEN})
+    }
+    return res.status(401).json({ error: 'invalid_code' })
 })
 
 function requireAdmin(req, res, next) {
-	const auth = req.headers.authorization || ''
-	const bearer = auth && auth.toLowerCase().startsWith('bearer ') ? auth.split(' ')[1] : null
-	const headerToken = req.headers['x-admin-token']
-	const token = bearer || headerToken
-	if (!token || token !== ADMIN_TOKEN) {
-		return res.status(401).json({ error: 'unauthorized' })
-	}
-	next()
+    const auth = req.headers.authorization || ''
+    const bearer = auth && auth.toLowerCase().startsWith('bearer ') ? auth.split(' ')[1] : null
+    const headerToken = req.headers['x-admin-token']
+    const token = bearer || headerToken
+    if (!token || token !== ADMIN_TOKEN) {
+        return res.status(401).json({ error: 'unauthorized' })
+    }
+    next()
 }
 
 app.post('/api/track-download', express.text({ type: '*/*' }), async (req, res) => {
   try {
-    // extraer IP real (X-Forwarded-For si existe)
+    // Extraer IP real considerando headers de Railway
     const xf = (req.headers['x-forwarded-for'] || '').toString();
-    const ip = xf ? xf.split(',')[0].trim() : (req.socket.remoteAddress || req.ip);
+    const cfIp = req.headers['cf-connecting-ip'];
+    const xRealIp = req.headers['x-real-ip'];
+    
+    const ip = cfIp || xRealIp || (xf ? xf.split(',')[0].trim() : (req.socket.remoteAddress || req.ip));
 
-    // intentar parsear body (si es JSON)
     let body = {};
     try {
       body = req.body ? JSON.parse(req.body) : {};
@@ -90,7 +112,7 @@ app.post('/api/track-download', express.text({ type: '*/*' }), async (req, res) 
       // ignore geo lookup failures
     }
 
-	const normalizeIp = (s='') => s.replace('::ffff:', '')
+    const normalizeIp = (s='') => s.replace('::ffff:', '')
     const isPrivateIp = (addr='') => {
       const a = normalizeIp(addr)
       return a === '::1' || a.startsWith('127.') || a.startsWith('10.') || a.startsWith('192.168.') || /^172\.(1[6-9]|2\d|3[0-1])\./.test(a)
@@ -104,19 +126,19 @@ app.post('/api/track-download', express.text({ type: '*/*' }), async (req, res) 
     }
 
     const document = {
-		event: body.event || 'download_cv',
-		timestamp: new Date(),
-		ip,
-		country: geo.country,
-		region: geo.region,
-		city: geo.city,
-		userAgent: req.headers['user-agent'] || null,
-		referrer: req.headers.referrer || body.referrer || null,
-		extra: body
-	};
+        event: body.event || 'download_cv',
+        timestamp: new Date(),
+        ip,
+        country: geo.country,
+        region: geo.region,
+        city: geo.city,
+        userAgent: req.headers['user-agent'] || null,
+        referrer: req.headers.referer || body.referrer || null,
+        extra: body
+    };
 
-	await db.collection('downloads').insertOne(document);
-	console.log(`📥 Descarga registrada: ${ip} (${geo.country || 'unknown'})`);
+    await db.collection('downloads').insertOne(document);
+    console.log(`📥 Descarga registrada: ${ip} (${geo.country || 'unknown'})`);
 
     res.status(204).end();
   } catch (err) {
@@ -199,16 +221,26 @@ app.get('/api/downloads/stats', requireAdmin, async (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.send('API funcionando');
+  res.json({ 
+    message: 'API funcionando',
+    timestamp: new Date().toISOString(),
+    env: process.env.NODE_ENV || 'development'
+  });
 });
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Servidor backend en puerto ${PORT}`);
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚀 Servidor backend en puerto ${PORT}`);
 });
 
 process.on('SIGINT', async () => {
-	console.log('Cerrando conexión MongoDB...');
-	await client.close();
-	process.exit(0);
+    console.log('Cerrando conexión MongoDB...');
+    await client.close();
+    process.exit(0);
+});
+
+process.on('SIGTERM', async () => {
+    console.log('Cerrando conexión MongoDB...');
+    await client.close();
+    process.exit(0);
 });
